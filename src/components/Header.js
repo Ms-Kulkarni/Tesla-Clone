@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import CloseIcon from "@mui/icons-material/Close";
 import { selectCars } from "../features/counter/carSlice/carSlice";
 import { useSelector } from "react-redux";
@@ -25,7 +25,8 @@ function Header() {
       <RightMenu>
         <a href="/">Shop</a>
         <a href="/">Account</a>
-        <CustomMenu
+        <a href="/">Menu</a>
+        <Menu
           onClick={() => {
             setBurgerStatus(true);
           }}
@@ -110,7 +111,7 @@ const RightMenu = styled.div`
   
 `;
 
-const CustomMenu = styled(MenuIcon)`
+const menu = styled(Menu)`
   cursor: pointer;
 `;
 
